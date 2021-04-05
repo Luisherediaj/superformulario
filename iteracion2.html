@@ -9,13 +9,13 @@
 <body>
     <form action="controller.php" method="POST" id="formulario2">
         <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre">
+        <input type="text" name="nombre" id="nombre" placeholder="Introduzca su nombre" required>
         <br>
         <label for="apellidos">Apellidos:</label>
-        <input type="text" name="apellidos" id="apellidos">
+        <input type="text" name="apellidos" id="apellidos" placeholder="Introduzca sus apellidos" required>
         <br>
         <label for="edad">Edad:</label>
-        <input type="number" name="edad" id="edad">
+        <input type="number" name="edad" id="edad" placeholder="Introduzca su edadd" min="18" required>
         <br>
         <p>Género:
         <label for="hombre">Hombre</label>
@@ -27,13 +27,13 @@
         </p>
         <br>
         <label for="dni">DNI:</label>
-        <input type="number" name="dni" id="dni">
+        <input type="text" name="dni" placeholder="Introduzca su DNI" pattern="[0-9]{8}[A-Z]{1}" title="8 números y una letra mayúscula" required>
         <br>
         <label for="email">Email:</label>
-        <input type="email" name="email" id="email">
+        <input type="email" name="email" id="email" placeholder="Introduzca su email" required>
         <br>
         <label for="mensaje">Escribe tú mensaje:</label>
-        <textarea name="mensaje" id="mensaje" cols="30" rows="5"></textarea>
+        <textarea name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Introduzca su mensaje" required></textarea>
         <br>
         <label for="coche">Elige tú coche:</label>
         <select name="coche" id="coche">
