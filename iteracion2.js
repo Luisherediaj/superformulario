@@ -22,6 +22,7 @@ function sendData(){
     let formData = new FormData(form);
     
     // Adjuntar variables
+    formData.append("creatorForm", "Luis");
 
     // 3. enviar la petición
     xhr.send(formData);
