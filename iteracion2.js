@@ -1,14 +1,22 @@
 'use strict'
 
 const form = document.querySelector("#formulario2");
-const txtNombre = document.getElementById('#nombre').value;
+// const txtNombre = document.getElementById('#nombre').value;
+const camposTexto = document.getElementById("formulario2").elements; 
 
 var formularioCorrecto = true;
 
-if(txtNombre == null || txtNombre.length == 0 || /^\s+$/.test(txtNombre)){
-    alert('ERROR: El campo nombre no debe ir vacío');
-    return false;
-  }
+// if(txtNombre == null || txtNombre.length == 0 || /^\s+$/.test(txtNombre)){
+//     alert('ERROR: El campo nombre no debe ir vacío');
+//     return false;
+//   }
+
+for (x=0; x < camposTexto.length; x++) {
+    if (camposTexto[x].value == '' && camposTexto[x].type=='text'){
+        alert("El campo " + camposTexto[x].id + " está vacio y es OBLIGATORIO");
+        return false;
+    }
+}  
 
 
 
