@@ -1,4 +1,18 @@
+'use strict'
+
 const form = document.querySelector("#formulario2");
+const txtNombre = document.getElementById('#nombre').value;
+
+var formularioCorrecto = true;
+
+if(txtNombre == null || txtNombre.length == 0 || /^\s+$/.test(txtNombre)){
+    alert('ERROR: El campo nombre no debe ir vacío');
+    return false;
+  }
+
+
+
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
